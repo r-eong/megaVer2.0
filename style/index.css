@@ -1,0 +1,1320 @@
+@charset "UTF-8";
+/* 전체 */
+*{
+    font-family: 'Asta Sans', 'sans-serif';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* container 전체 */
+.container{
+    /* color: #ffffff; */
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    font-weight: normal;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------- */
+
+/* 헤더 전체 */
+.head{
+    /* width: 1100px; */
+    position: relative;
+    height: 92px;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #181818;
+    color: #ffffff;
+    border-bottom: 1px solid #424242;
+}
+/* 헤더 상단 */
+.head .head_top{
+    font-size: 14px;
+    margin: 0 auto;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0 0;
+}
+.head .head_top .head_left > a{
+    margin-right: 20px;
+}
+.head .head_top .head_right > a{
+    margin-left: 20px;
+}
+.head .head_top .head_left > a,
+.head .head_top .head_right > a{
+    color: #999999;
+    text-decoration: none;
+}
+.head .head_top a:hover{
+    border-bottom: 1px solid #646464;
+}
+/* 헤더 하단 메뉴바 전체 */
+.head .nav{
+    margin: 0 auto;
+    width: 1100px;
+    font-size: 19px;
+    position: relative;
+    z-index: 50;
+}
+.head .nav > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* margin-bottom: 10px; */
+}
+/* 헤더 하단 아이콘 전체 */
+.head .nav ul li button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .sitemapBtn,
+.nav .searchBtn{
+    margin-right: 20px;
+}
+.nav .scheduleBtn img,
+.nav .mymegaBtn img{
+    margin-left: 20px;
+}
+.nav .scheduleBtn img{
+    width: 21px;
+}
+
+.nav ul li.on:hover::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    display: inline-block;
+    position: absolute;
+    bottom:2px;
+    left: 0;
+}
+
+
+/* 나비 */
+/* 메인 메뉴 전체 */
+.nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  position: relative;
+}
+
+.nav ul li{
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+    display: flex;
+    transition: 0.5s;
+}
+
+/* 서브 메뉴(navSUB) 숨김 기본 상태 */
+.nav ul li .navSUB{
+  display: none;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200vw;
+  background-color: #181818;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 99;
+  /* margin-top: 5px; */
+}
+
+/* li(id=on)에 마우스 올렸을 때 서브메뉴 표시 */
+.nav ul li.on:hover .navSUB{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* 서브 메뉴 안의 링크 */
+.nav ul li.on .navSUB a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+
+/* 서브 메뉴 hover 시 밑줄 */
+.nav ul li.on .navSUB a:hover{
+  text-decoration: underline;
+}
+
+/* nav 좌측 3줄메뉴 버튼 */
+/* 버튼 이미지 전환 */
+.sitemapBtn img{
+    width: 20px;
+    content: url('../img/ico-sitemap-white.png');
+    /* outline: none; */
+}
+.sitemapBtn.active img{
+    width: 20px;
+    content: url('../img/btn-header-layer-close.png');
+}
+
+.searchBtn img{
+    width: 20px;
+    content: url('../img/ico-search-white.png');
+}
+.searchBtn.active img{
+    width: 20px;
+    content: url('../img/btn-header-layer-close.png');
+}
+
+/* SITEMAP, 검색 공용css */
+.modal,
+.search_modal{
+    display: none;
+    position: absolute;
+    top: 92px;
+    left: 50%;
+    /* right: 0; */
+    width: 100vw;  /* 화면 전체 사이즈 */
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 100;
+}
+
+/* SITEMAP 모달 */
+.modal.active{
+    display: flex;
+}
+
+.modal_content{
+    background: #333333;
+    color: #ffffff;
+    width: 100%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal_content h2{
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 1100px;
+}
+
+/* SITEMAP 내부 grid */
+.sitemap_grid{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 1100px;
+    text-align: center;
+}
+
+.sitemap_top,
+.sitemap_bottom{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 28px;
+}
+.sitemap_top li{
+    margin: 5px;
+}
+
+
+/* .sitemap_top > div{
+    flex: 1 1 calc(100% / 6);
+}
+.sitemap_bottom > div{
+    flex: 1 1 calc(100% / 4);
+} */
+
+.sitemap_grid h3{
+    color: #dbdbdb;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    border-top: 0.5px solid #424242;
+    border-bottom: 0.5px solid #424242;
+    padding: 10px 0;
+    width: 160px;
+}
+.sitemap_grid a{
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 15px;
+}
+.sitemap_grid a:hover{
+    color: #3d9dbb;
+}
+
+/* 검색 모달 */
+
+.search_modal.active{
+    display: block;
+    background-color: #351f67;
+    /* width: 100%; */
+    padding: 35px;
+}
+.search_modal > div{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+}
+.search_all{
+    width: 1100px;
+}
+.search_modal .search_content{
+    width: 100%;
+}
+.search_content em{
+    font-size: 25px;
+    margin-right: 15px;
+}
+/* 검색전체 */
+.searchBox{
+    display: flex;
+    border-bottom: 1px solid #dbdbdb;
+}
+.search_modal input{
+    width: 360px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #dbdbdb;
+    background-color: transparent;
+    font-size: 17px;
+}
+.search_modal input::placeholder{
+    color: #dbdbdb;
+    font-size: 17px;
+}
+.searchBox button{
+    width: 60px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.searchBox img{
+    filter: invert(97%) sepia(2%) saturate(55%) hue-rotate(324deg) brightness(107%) contrast(72%);
+}
+/* 탭 메뉴 */
+.rank_tabs{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.rank_tab{
+    background: none;
+    border: none;
+    color: #cccccc;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.rank_tab.active{
+    color: #f2f4f5;
+    border-bottom: 2px solid #f2f4f5;
+}
+
+/* 탭 내용 */
+.rank_panel{
+    display: none;
+}
+.rank_panel.active{
+    display: block;
+}
+.rank_item{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.rank_item img{
+    width: 150px;
+    height: 215px;
+}
+.rank_item ul{
+    list-style: none;
+    color: #ffffff;
+    padding-left: 20px;
+    /* display: flex; */
+}
+.rank_item ul li{
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+.rank_panel ul li a{
+    cursor: pointer;
+    font-size: 15px;
+}
+.rank_panel ul li a:hover{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+/* -------------------------------------- */
+
+
+/* 섹션1 */
+.section01{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+}
+/* 박스오피스 / 더많은영화보기+ */
+.section01 .sec01_top{
+    width: 1100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    margin: 76px 0 20px 0;
+}
+/* 박스오피스 */
+.section01 .sec01_top span{
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #646464;
+    padding-bottom: 5px;
+}
+/* 더많은영화보기+ */
+.section01 .sec01_top a{
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    color: #999999;
+    padding: 3px 0;
+}
+.section01 .sec01_top a:hover{
+    border-bottom: 1px solid #999999;
+}
+/* 영화랭킹전체 */
+
+/* 영화별 */
+.movie_rank{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+/* 호버 전 */
+.movie-item .movie-thumb{
+    position: relative;
+    color: #ffffff;
+    width: 245px;
+    height: 352px;
+}
+/* 포스터 */
+.movie-item .movie-thumb .movie-poster{
+    border-radius: 5px;
+    width: 245px;
+    height: 352px;
+}
+/* 순위 */
+.movie-item .movie-thumb em{
+    position: absolute;
+    padding: 10px 15px;
+    font-size: 32px;
+    text-shadow: 0 3px 4px rgba(0,0,0,0.7);
+}
+/* 태그 */
+.movie-item .movie-thumb .movie-tags01{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 60px;
+}
+.movie-item .movie-thumb .movie-tags02{
+    position: absolute;
+    bottom: 28px;
+    left: 5px;
+    width: 60px;
+}
+
+.movie-item .movie-thumb .movie-age{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 28px;
+}
+/* 호버 후 */
+.movie-item .movie-thumb .movie-hover{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    width: 245px;
+    height: 352px;
+    color: #ffffff;
+    padding: 25px;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movie-item .movie-thumb .movie-hover:hover{
+    /* display: block; */
+    opacity: 1;
+    cursor: pointer;
+}
+.movie-item .movie-thumb .movie-hover > span{
+    font-size: 15px;
+    line-height: 25px;
+}
+.caption_line{
+    width: 100%;
+    height: 1px;
+    background-color: #646464;
+    margin-top: 80px;
+}
+.movie-item .movie-thumb .movie-hover p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+.movie-item .movie-thumb .movie-hover p span#cap_score{
+    font-size: 25px;
+    margin-left: 5px;
+    color: #3d9dbb;
+    font-weight: 500;
+}
+
+/* 좋아요수/예매버튼 */
+.movie-action{
+    display: flex;
+    gap: 7px;
+    margin-top: 10px;
+}
+.movie-action .likeBtn,
+.movie-action .reserveBtn{
+    width: 100%;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.movie-action .likeBtn{
+    border: 1px solid #ffffff;
+    background-color: #181818;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.movie-action .likeBtn:hover{
+    background-color: #333333;
+}
+/* .movie-action .likeBtn span{
+    width: 17px;
+    height: 15px;
+    background-image: url('../img/ico-heart-toggle-main.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.movie-action .likeBtn:hover span{
+    background-image: url('../img/ico-heart-toggle-main-blue.png');
+} */
+.movie-action .reserveBtn{
+    border: 2px solid #3d9dbb;
+    background-color: #3d9dbb;
+    color: #ffffff;
+}
+.movie-action .reserveBtn:hover{
+    border: 2px solid #277e99;
+    background-color: #277e99;
+}
+
+/* sec01_bottom */
+.sec01_bottom{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #181818;
+    margin-top: 50px;
+}
+/* 검색창 */
+.sec01_bottom .sec01-searchBox{
+    border-bottom: 1px solid #646464;
+}
+.sec01_bottom .sec01-searchBox input{
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #cccccc;
+    outline: none;
+}
+.sec01_bottom .sec01-searchBox input::placeholder{
+    color: #999;
+}
+.sec01_bottom .sec01-searchBox img{
+    cursor: pointer;
+}
+
+/* 검색창 제외 공통 */
+/* 상영시간표 */
+/* 박스오피스 */
+/* 빠른예매 */
+.sec01_bottom .movie-menu a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.sec01_bottom .movie-menu a:hover{
+    border-bottom: 1px solid #cccccc;
+}
+.sec01_bottom .movie-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.sec01_bottom .sec01-reserve{
+    margin-right: 80px;
+}
+.sec01_bottom .movie-menu::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 28px;
+    background-color: #424242;
+    top: 0;
+    left: -75%;
+}
+
+
+/* 섹션2 */
+.section02{
+    height: 845px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+}
+.section02::before{
+position: absolute;
+content: '';
+bottom: 0;
+left: 0;
+width: 100%;
+height: 331px;
+background-color: #503396;
+z-index: -1;
+}
+/* 혜택 */
+.section02 h2{
+    width: 1100px;
+    font-size: 31px;
+    font-weight: normal;
+    color: #351f67;
+}
+/* 슬라이드 전체 */
+/* 슬라이드 이미지 */
+.section02 .sec02_top .sec02-slider{
+    display: flex;
+    align-items: flex-start;
+    width: 1100px;
+}
+/* .photo01{
+    transform: translateY(100px);
+}
+.photo01.activeUP{
+    transform: translateY(-100px);
+} */
+/* 이미지 애니메이션 */
+/* .section02 .sec02_top .sec02-slider .photo01{
+    transition: 3s ease;
+    transition-property: all;
+    transition-duration: 0s;
+    transition-duration: 1s;
+} */
+/* 슬라이드바 */
+.sec02_top{
+    position: relative;
+}
+/* 슬라이드 전체 */
+.sec02_sliderControl{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* 슬라이드 바 */
+.sec02_top .sec02_sliderControl .sliderPage{
+    width: 200px;
+    height: 2px;
+    display: flex;
+    background-color: #cccccc;
+}
+.sec02_top .sec02_sliderControl .sliderPage span{
+    display: inline-block;
+    width: 16.66666666666667%;
+}
+/* 바 각자 사이즈 */
+.sec02_top .sec02_sliderControl .sliderPage span.active{
+    /* height: 2px; */
+    background-color: #351f67;
+}
+/* 슬라이드 페이지 제어 버튼 */
+.sec02_top .sliderPageControl{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.sec02_top .sliderPageControl img{
+    cursor: pointer;
+}
+/* 슬라이드 우측 광고 이미지 */
+.sec02_top .ad-movie{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sec02_top .ad-movie img{
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+}
+/* 슬라이드바 하단 광고 이미지 */
+.section02 .ad-benefit{
+    width: 1100px;
+}
+.section02 .ad-benefit #adBenefit01,
+.section02 .ad-benefit #adBenefit02{
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+}
+.section02 .ad-benefit #adBenefit01{
+    width: 441px;
+    height: 204px;
+    margin-right: 15px;
+}
+.section02 .ad-benefit #adBenefit02{
+    width: 204px;
+    height: 204px;
+}
+/* 광고이미지 하단 서비스메뉴 */
+.section02 .service-section{
+    width: 1100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.section02 .service-section button{
+    width: 220px;
+    height: 82px;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.section02 .service-section button:hover{
+    color: #cccccc;
+}
+
+/* 섹션3 */
+.section03{
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #252451;
+    color: #ffffff;
+    padding: 50px 0;
+}
+/* 큐레이션 */
+.section03 .sec03-head{
+    width: 1100px;
+    margin-bottom:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section03 .sec03-head h2{
+    font-size: 31px;
+    font-weight: normal;
+}
+.section03 .sec03-head a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.section03 .sec03-head a:hover{
+    border-bottom: 1px solid #cccccc;
+}
+
+/* 상단 제외 전체 */
+.curation{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 좌측 큰 이미지 */
+.section03 .curation-main{
+    position: relative;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/*포스터 */
+.section03 .curation-main img#cur_poster{
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+/* 라벨 */
+.section03 .curation-main img#cur_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 버튼 */
+.section03 .curation-main .curationBtn{
+    display: flex;
+    gap: 5px;
+    height: 50px;
+    margin-top: 5px;
+    width: 300px;
+    position: absolute;
+    top: 443px;
+}
+.section03 .curation-main .curationBtn button{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.section03 .curation-main .curationBtn #curBtn01{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: 100%;
+}
+.section03 .curation-main .curationBtn #curBtn01:hover{
+    background-color: #ffffff13;
+}
+.section03 .curation-main .curationBtn #curBtn02{
+    border: 1px solid #277e99;
+    background-color: #277e99;
+    border-radius: 5px;
+    width: 100%;
+}
+.section03 .curation-main .curationBtn #curBtn02:hover{
+    border: 1px solid #3d9dbb;
+    background-color: #3d9dbb;
+}
+
+/* 우측 설명/다른 영화들 */
+.section03 .curation-detail{
+    width: 730px;
+}
+/* 상단 */
+.section03 .curation-detail .detailHead{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #646464;
+    margin-bottom: 20px;
+}
+.section03 .curation-detail .detailHead p{
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+.section03 .curation-detail .detailHead h3{
+    font-size: 38px;
+    font-weight: normal;
+}
+/* 영화 설명 */
+.section03 .curation-detail .detailMid p{
+    line-height: 23px;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+/* 영화 목록 */
+.section03 .curation-detail .curation-list{
+    display: flex;
+}
+/* 포스터 */
+.section03 .curation-detail .curation-list .curItem-poster{
+    width: 170px;
+    height: 240px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+/* 라벨 */
+.section03 .curation-detail .CI01,
+.section03 .curation-detail .CI02,
+.section03 .curation-detail .CI03,
+.section03 .curation-detail .CI04{
+    position: relative;
+}
+.section03 .curation-detail .curation-list .CL01,
+.section03 .curation-detail .curation-list .CL02,
+.section03 .curation-detail .curation-list .CL03,
+.section03 .curation-detail .curation-list .CL04{
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+/* 영화제목 */
+.curation-list .curation-item a{
+    display: inline-block;
+    width: 170px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border:1px solid white */
+    margin: 0 5px;
+}
+.curation-list .curation-item a:hover{
+    color: #3d9dbb;
+}
+
+/* 섹션4 */
+.section04{
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+/* 상단 */
+.section04 h2{
+    width: 1100px;
+    font-size: 31px;
+    font-weight: normal;
+    color: #351f67;
+    margin-bottom: 40px;
+}
+/* 상단 제외 전체 */
+.section04 .theater-section{
+    width: 1100px;
+}
+/* 특별관 */
+.section04 .theater-section .theater-special{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition-property: transform;
+    position: relative;
+}
+.section04 .theater-section .theater-special img{
+    cursor: pointer;
+}
+/* 화살표 */
+.section04 .theater-section .theater-special > img{
+    position: absolute;
+}
+.section04 .theater-section .theater-special img#slidePrev{
+    left: -30px;
+}
+.section04 .theater-section .theater-special img#slideNext{
+    right: -30px;
+}
+.section04 .theater-section .theater-special .swipe{
+    height: 170px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    /* border: 1px solid red; */
+}
+.section04 .theater-section .theater-special .swipe::-webkit-scrollbar{
+    display: none;
+}
+/* .section04 .theater-section .theater-special .swipe a{
+    background-image: url('../img/bg-main-dolbycinema.png');
+    background-size: 170px;
+    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+} */
+.section04 .theater-section .theater-special .swipe img{
+    width: 170px;
+}
+.section04 .theater-section .theater-special .swipe img:hover{
+    transform: translateY(-50%);
+}
+
+/* 지점별 안내 / 공지사항 */
+.section04 .theater-section .theater-info{
+    margin: 50px 0;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.section04 .theater-section .theater-info::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    /* transform: translateX(50%); */
+    width: 200vw;
+    height: 1px;
+    background-color: #cccccc;
+}
+.section04 .theater-section .theater-info::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    /* transform: translateX(50%); */
+    width: 200vw;
+    height: 1px;
+    background-color: #cccccc;
+}
+.section04 .theater-section .theater-info p{
+    padding-right: 35px;
+    position: relative;
+}
+.section04 .theater-section .theater-info p::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 18px;
+    width: 1px;
+    height: 100%;
+    background-color: #cccccc;
+}
+.section04 .theater-section .theater-info a{
+    cursor: pointer;
+}
+.section04 .theater-section .theater-info a:hover{
+    /* border-bottom: 1px solid #999999; */
+    color: #3d9dbb;
+}
+.section04 .theater-section .theater-info #info{
+    width: 830px;
+}
+.section04 .theater-section .theater-info #info strong{
+    color: #277e99;
+}
+/* 고객센터 / FAQ / 단체대관문의 등 */
+.section04 .theater-section .service-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section04 .theater-section .service-info button{
+    width: 100%;
+    height: 90px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.section04 .theater-section .service-info button a{
+    padding: 0 0 3px 0;
+}
+.section04 .theater-section .service-info button:hover a{
+    border-bottom: 1px solid #646464;
+}
+
+/* -------------------------------------- */
+
+/* 푸터 전체 */
+.foot{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f4f5;
+    font-size: 13px;
+    color: #222222;
+}
+/* 푸터 전체 display flex */
+.foot .foot_top,
+.foot .foot_top ul,
+.foot .foot_mid,
+.foot .foot_mid ul{
+    display: flex;
+}
+/* ---------------------------------------- */
+/* 푸터 첫줄 */
+.foot .foot_top{
+    width: 1100px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+/* 회사소개 ~ 윤리경영 */
+.foot .foot_top > ul li{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.foot .foot_top > a{
+    border: 1px solid #cccccc;
+    padding: 5px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #424242;
+    text-decoration: none;
+    height: 32px;
+    font-size: 14px;
+}
+.foot .foot_top > ul li a{
+    text-decoration: none;
+    color: #222222;
+}
+.foot .foot_top > ul li a:hover{
+    border-bottom: 1px solid #424242;
+}
+/* ---------------------------------------- */
+/* 푸터 아랫줄 */
+.foot .foot_mid{
+    width: 1100px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+/* 메가박스 로고 */
+.foot .foot_mid > img{
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+}
+.foot .foot_mid .mid_p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    margin-right: 40px;
+}
+.foot .foot_mid .mid_a a{
+    margin: 0 3px;
+}
+
+/* 극장 찾기 */
+.theater_search_modal{
+    display: none;
+    background-color: #333333;
+    /* color: #cccccc; */
+    padding: 40px 0;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+.theater_search_modal.active{
+    display: block;
+}
+.theater_search_modal .theater_search_modalIn .theater_search_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.theater_search_modal h3,
+.theater_search_modal span{
+    color: #ffffff;
+    font-weight: normal;
+}
+.theater_search_modal h3{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.theater_search_modal button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.theater_search_modal .theater_search_modalIn{
+    width: 1100px;
+    margin: 0 auto;
+}
+.theater_search_modal .theater_search_modalIn ul{
+    border: 1px solid #424242;
+    padding: 30px;
+}
+.theater_search_modal .theater_search_modalIn ul li{
+    margin: 15px 0;
+    display: flex;
+}
+.theater_search_modal .theater_search_modalIn span{
+    display: block;
+    width: 180px;
+}
+.theater_search_modal .theater_search_modalIn .cinema_list{
+    width: 900px;
+}
+.theater_search_modal .theater_search_modalIn a{
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 14px;
+    margin-right: 25px;
+    overflow-wrap: break-word;
+    display: inline-block;
+}
+.theater_search_modal .theater_search_modalIn a:hover{
+    color: #3d9dbb;
+    border-bottom: 1px solid #3d9dbb;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.overlay.active{
+    visibility: inherit;
+}
+
+/* ---------------------------------------- */
+
+/* 모달 */
+.popupModal{
+    width: 370px;
+    height: 335px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 흰배경 */
+.popupModal .modal_main{
+    position: relative;
+    width: 360px;
+    height: 325px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* 엑스버튼 */
+.popupModal .modal_main #xBtn{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 28px;
+    cursor: pointer;
+}
+/* 이미지 */
+/* .popupModal .modal_main .modalImg_trans{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+} */
+
+.popupModal .modal_main .modalImg_trans .modalactive01{
+    width: 320px;
+    height: 250px;
+    border-radius: 10px;
+}
+ /* .popupModal .modal_main .modalImg_trans{
+    opacity: 0;
+    visibility: hidden;
+ } */
+ .popupModal .modal_main .modalImg_trans.fadein{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+} 
+/* .fadeout{ 
+    opacity: 0;
+    visibility: hidden;
+} */
+/* .fadein{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+} */
+
+
+/* 버튼전체 */
+.popupModal .modal_main .modalbutton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.popupModal .modal_main .modalbutton .slide-nav{
+    display: flex;
+    gap: 8px;
+}
+/* 동그라미 */
+.popupModal .modal_main .modalbutton .slide-nav span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    /* cursor: pointer; */
+}
+.popupModal .modal_main .modalbutton .slide-nav span.modalactive02{
+    background-color: #351f67;
+}
+    
+/* 하루동안 보지 않기 */
+.popupModal .modal_main .modalbutton .popup-option{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 70px;
+}
+.popupModal .modal_main .modalbutton .popup-option input{
+    outline: none;
+    width: 16px;
+    height: 16px;
+}
+.popupModal .modal_main .modalbutton .popup-option label{
+    font-size: 14px;
+    color: #646464;
+    display: inline-block;
+    cursor: pointer;
+}

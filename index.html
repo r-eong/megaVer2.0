@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script defer src = "js/index.js"> </script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Asta Sans">
+</head>
+<body>
+    <!-- 전체 -->
+    <div class="container">
+        <!-- 헤더 - 로고, 메뉴, 로그인 등등 상단부분 -->
+        <header class="head">
+            <!-- 헤더 상단 -->
+            <div class="head_top">
+                <!-- vip lounge, 멤버십 고객센터 -->
+                <div class="head_left">
+                    <a href="#none">VIP LOUNGE</a>
+                    <a href="#none">멤버십</a>
+                    <a href="#none">고객센터</a>
+                </div>
+                <!-- 로그아웃, 빠른예매 -->
+                <div class="head_right">
+                    <a href="#none">로그아웃</a>
+                    <a href="#none">회원가입</a>
+                    <a href="megabox.html">빠른예매</a>
+                </div>
+            </div>
+            <!-- 헤더 하단 메뉴바 전체 -->
+            <div class="nav">
+                <ul>
+                    <li>
+                        <!-- 좌측 3줄 메뉴버튼 - SITEMAP -->
+                        <!-- 사이트맵 버튼 -->
+                        <button class="sitemapBtn">
+                            <img src="img/ico-sitemap-white.png" alt="사이트맵">
+                        </button>
+                        <!-- 좌측 검색 버튼 -->
+                        <button class="searchBtn">
+                            <img src="img/ico-search-white.png" alt="검색">
+                        </button>
+
+                    </li>
+                    <!-- 나비 -->
+                    <li class="on">영화
+                        <div class="navSUB">
+                            <a href="movieList.html">전체영화</a>
+                        </div>
+                    </li>
+                    <li class="on">예매
+                        <div class="navSUB">
+                            <a href="#none">빠른예매</a>
+                            <a href="#none">상영시간표</a>
+                            <a href="#none">더 부티크 프라이빗 예매</a>
+                        </div>
+                    </li>
+                    <li class="on">극장
+                        <div class="navSUB">
+                            <a href="#none">전체극장</a>
+                            <a href="#none">특별관</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html"><img src="img/logo-white_new2.png" alt="메가박스 메인으로 가기"/></a></li>
+                    <li class="on">이벤트
+                        <div class="navSUB">
+                            <a href="#none">진행중 이벤트</a>
+                            <a href="#none">지난 이벤트</a>
+                            <a href="#none">당첨자발표</a>
+                        </div>
+                    </li>
+                    <li>스토어</li>
+                    <li class="on">혜택
+                        <div class="navSUB">
+                            <a href="#none">메가박스 멤버십</a>
+                            <a href="#none">제휴/할인</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="scheduleBtn">
+                            <img src="img/ico-schedule-white.png" alt="상영 시간표"/>
+                        </button>
+                        <button class="mymegaBtn">
+                            <img src="img/ico-mymega-white.png" alt="나의 메가박스"/>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- 모달 영역 (버튼 아래에만 감싸주기만 함) -->
+        <div class="modal">
+            <div class="modal_content">
+                <h2>SITEMAP</h2>
+                <div class="sitemap_grid">
+                    <div class="sitemap_top">
+                        <div>
+                            <h3>영화</h3>
+                            <ul>
+                                <li><a href="#none">전체영화</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>예매</h3>
+                            <ul>
+                                <li><a href="#none">빠른예매</a></li>
+                                <li><a href="#none">상영시간표</a></li>
+                                <li><a href="#none">더 부티크 프라이빗 예매</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>극장</h3>
+                            <ul>
+                                <li><a href="#none">전체극장</a></li>
+                                <li><a href="#none">특별관</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>이벤트</h3>
+                            <ul>
+                                <li><a href="#none">진행중 이벤트</a></li>
+                                <li><a href="#none">지난 이벤트</a></li>
+                                <li><a href="#none">당첨자 발표</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>스토어</h3>
+                            <ul>
+                                <li><a href="#none">새로운 상품</a></li>
+                                <li><a href="#none">메가티켓</a></li>
+                                <li><a href="#none">팝콘/음료/굿즈</a></li>
+                                <li><a href="#none">포인트몰</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>나의 메가박스</h3>
+                            <ul>
+                                <li><a href="#none">나의 메가박스 홈</a></li>
+                                <li><a href="#none">예매/구매내역</a></li>
+                                <li><a href="#none">영화관람권</a></li>
+                                <li><a href="#none">스토어교환권</a></li>
+                                <li><a href="#none">할인/제휴쿠폰</a></li>
+                                <li><a href="#none">멤버십포인트</a></li>
+                                <li><a href="#none">나의 무비스토리</a></li>
+                                <li><a href="#none">나의 이벤트 응모내역</a></li>
+                                <li><a href="#none">나의 문의내역</a></li>
+                                <li><a href="#none">자주쓰는 할인카드</a></li>
+                                <li><a href="#none">회원정보</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sitemap_bottom">
+                        <div>
+                            <h3>혜택</h3>
+                            <ul>
+                                <li><a href="#none">멤버십 안내</a></li>
+                                <li><a href="#none">VIP LOUNGE</a></li>
+                                <li><a href="#none">제휴/할인</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>고객센터</h3>
+                            <ul>
+                                <li><a href="#none">고객센터 홈</a></li>
+                                <li><a href="#none">자주묻는질문</a></li>
+                                <li><a href="#none">공지사항</a></li>
+                                <li><a href="#none">1:1문의</a></li>
+                                <li><a href="#none">단체/대관문의</a></li>
+                                <li><a href="#none">분실물문의</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>회사소개</h3>
+                            <ul>
+                                <li><a href="#none">메가박스소개</a></li>
+                                <li><a href="#none">사회공헌</a></li>
+                                <li><a href="#none">홍보자료</a></li>
+                                <li><a href="#none">제휴/부대사업문의</a></li>
+                                <li><a href="#none">온라인제보센터</a></li>
+                                <li><a href="#none">IR자료</a></li>
+                                <li><a href="#none">인재채용</a></li>
+                                <li><a href="#none">윤리경영</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>이용정책</h3>
+                            <ul>
+                                <li><a href="#none">이용약관</a></li>
+                                <li><a href="#none">위치기반서비스 이용약관</a></li>
+                                <li><a href="#none">개인정보처리방침</a></li>
+                                <li><a href="#none">스크린수배정에관한기준</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 검색 모달 -->
+        <div class="search_modal">
+            <div>
+                <div class="search_content">
+                    <!-- 탭 메뉴 전체 -->
+                    <div class="rank_tabs">
+                        <button class="rank_tab active" data-target="booking">예매율 순</button>
+                        <button class="rank_tab" data-target="megabox">메가박스 관객순</button>
+                    </div>
+
+                    <!-- 예매율 순 -->
+                    <div class="rank_panel active" id="booking">
+                        <div class="rank_item">
+                            <img src="img/rBGmxIIt5wLgjk1nEQr84Crh2Fvxhn4o_316.jpg" alt="영화 포스터">
+                            <ul>
+                                <li><em>1</em><a>극장판 체인소 맨:레제편</a></li>
+                                <li><em>2</em><a>보스</a></li>
+                                <li><em>3</em><a>어쩔수가없다</a></li>
+                                <li><em>4</em><a>투모로우바이투게더 브이알 콘서트:하트 어택</a></li>
+                                <li><em>5</em><a>원 배틀 애프터 어나더</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 메가박스 관객순 -->
+                    <div class="rank_panel" id="megabox">
+                        <div class="rank_item">
+                            <img src="img/hWiZN7PP9G18jB18bS2BfyOTRDPpJH0m_316.jpg" alt="영화 포스터">
+                            <ul>
+                                <li><em>1</em><a>F1 더 무비</a></li>
+                                <li><em>2</em><a>극장판 귀멸의 칼날:무한성편</a></li>
+                                <li><em>3</em><a>좀비딸</a></li>
+                                <li><em>4</em><a>진격의 거인 완결편 더 라스트 어택</a></li>
+                                <li><em>5</em><a>하얼빈</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchBox">
+                    <input type="text" placeholder="영화 제목을 입력하세요">
+                    <button>
+                        <img src="img/ico-search.png"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 섹션1 -->
+        <div class="section01">
+            <div class="sec01_top">
+                <span>박스오피스</span>
+                <a href="#none">더 많은 영화보기&nbsp;&nbsp;<strong>╋</strong></a>
+            </div>
+            <div class="sec01_mid">
+                <!-- 영화 랭킹 전체 -->
+                <div class="movie_rank">
+                    <!-- 영화별 정보 -->
+                    <!-- 주술회전 -->
+                    <div class="movie-item">
+                        <!-- 호버 전 기본 -->
+                        <div class="movie-thumb">
+                            <!-- 순위 -->
+                            <em>1</em>
+                            <!-- 포스터 -->
+                            <img class="movie-poster" src="img/wk12bo4eQtWwuE23HoRcGhfC3XlzDbGV_420.jpg" alt="impossiblePoster" />
+                            <!-- 태그 -->
+                            <img class="movie-tags01" src="img/type_mega_mx4d.png"/>
+                            <!-- 연령가 -->
+                            <img class="movie-age" src="img/15_56x56.png"/>
+
+                            <!-- 호버 후 뜨는 정보 -->
+                            <div class="movie-hover">
+                                <span>
+                                    최강의 두 사람, 다시는 돌아갈 수 없는 푸른 봄</br>
+                                    2006년 봄, 주술고등전문학교</br>
+                                    시절의 고죠 사토루와 게토 스구루.</br>
+                                    불사의 술식을 가진 주술계 핵심,</br>
+                                    텐겐으로부터 의뢰가 도착한다.
+                                </span>
+                                <div class="caption_line"></div>
+                                <p>관람평 <span id="cap_score">9.5</span></p>
+                            </div>
+                        </div>
+                        <!-- 좋아요 수 / 예매버튼 -->
+                        <div class="movie-action">
+                            <!-- 좋아요 -->
+                            <button class="likeBtn">
+                                <img src="img/ico-heart-toggle-main.png">
+                                <!-- <span></span> -->
+                                1.2k
+                            </button>
+                            <!-- 예매 -->
+                            <button class="reserveBtn">예매</button>
+                        </div>
+                    </div>
+                    <!-- 체인소 맨 -->
+                    <div class="movie-item">
+                        <!-- 호버 전 기본 -->
+                        <div class="movie-thumb">
+                            <!-- 순위 -->
+                            <em>2</em>
+                            <!-- 포스터 -->
+                            <img class="movie-poster" src="img/rBGmxIIt5wLgjk1nEQr84Crh2Fvxhn4o_316.jpg" alt="impossiblePoster" />
+                            <!-- 태그 -->
+                            <img class="movie-tags01" src="img/type_dolbycinema.png"/>
+                            <img class="movie-tags02" src="img/type_mega_mx4d.png"/>
+                            <!-- 연령가 -->
+                            <img class="movie-age" src="img/15_56x56.png"/>
+
+                            <!-- 호버 후 뜨는 정보 -->
+                            <div class="movie-hover">
+                                <span>
+                                    인기 애니메이션 '체인소 맨' 첫</br>
+                                    공식 극장판 국내 상륙!</br>
+                                    압도적 배틀 액션이 스크린에서</br>
+                                    폭발한다!</br>
+                                    </br>
+                                    데블 헌터로 일하는 소년 '덴</br>
+                                    지'는 조직의 배신으로 죽음에 내
+                                </span>
+                                <div class="caption_line"></div>
+                                <p>관람평 <span id="cap_score">9.4</span></p>
+                            </div>
+                        </div>
+                        <!-- 좋아요 수 / 예매버튼 -->
+                        <div class="movie-action">
+                            <!-- 좋아요 -->
+                            <button class="likeBtn">
+                                <img src="img/ico-heart-toggle-main.png">
+                                1.2k
+                            </button>
+                            <!-- 예매 -->
+                            <button class="reserveBtn">예매</button>
+                        </div>
+                    </div>
+                    <!-- 어쩔 수 없다 -->
+                    <div class="movie-item">
+                        <!-- 호버 전 기본 -->
+                        <div class="movie-thumb">
+                            <!-- 순위 -->
+                            <em>3</em>
+                            <!-- 포스터 -->
+                            <img class="movie-poster" src="img/FRNqKt4pbztmQXaLMu2ZIGP43ebJ9F8i_316.jpg" alt="impossiblePoster" />
+                            <!-- 태그 -->
+                            <img class="movie-tags01" src="img/type_dolbycinema.png"/>
+                            <img class="movie-tags02" src="img/type_dolbyatmos.png"/>
+                            <!-- 연령가 -->
+                            <img class="movie-age" src="img/15_56x56.png"/>
+
+                            <!-- 호버 후 뜨는 정보 -->
+                            <div class="movie-hover">
+                                <span>
+                                    '다 이루었다'는 생각이 들 만큼</br>
+                                    삶에 만족하던 25년 경력의 제지</br>
+                                    전문가 '만수'(이변헌).</br>
+                                    아니 '미리'(손예진), 두 아이, 반</br>
+                                    려견들과 함께 행복한 일상을 보</br>
+                                    내던 만수는</br>
+                                    회사로부터 돌연 해고 통보를 받
+                                </span>
+                                <div class="caption_line"></div>
+                                <p>관람평 <span id="cap_score">8.1</span></p>
+                            </div>
+                        </div>
+                        <!-- 좋아요 수 / 예매버튼 -->
+                        <div class="movie-action">
+                            <!-- 좋아요 -->
+                            <button class="likeBtn">
+                                <img src="img/ico-heart-toggle-main.png">
+                                1.2k
+                            </button>
+                            <!-- 예매 -->
+                            <button class="reserveBtn">예매</button>
+                        </div>
+                    </div>
+                    <!-- 웨폰 -->
+                    <div class="movie-item">
+                        <!-- 호버 전 기본 -->
+                        <div class="movie-thumb">
+                            <!-- 순위 -->
+                            <em>4</em>
+                            <!-- 포스터 -->
+                            <img class="movie-poster" src="img/C4YArWIShQ2G4ceROJglVG6wkI52eQ55_420.jpg" alt="impossiblePoster" />
+                            <!-- 태그 -->
+                            <img class="movie-tags01" src="img/type_dolbyatmos.png"/>
+                            <!-- 연령가 -->
+                            <img class="movie-age" src="img/19_112x112.png"/>
+
+                            <!-- 호버 후 뜨는 정보 -->
+                            <div class="movie-hover">
+                                <span>
+                                    평병한 수요일,</br>
+                                    어느 마을 학교의 같은 반 학생</br>
+                                    17명이 등교하지 않는다.</br>
+                                    그날 새벽 2시 17분, 잠에서 깬</br>
+                                    아이들이 어둠 속으로 달려가 돌</br>
+                                    아오지 않았기 때문이다.</br>
+                                    유일하게 남은 아이는 입을 다물
+                                </span>
+                                <div class="caption_line"></div>
+                                <p>관람평 <span id="cap_score">8.1</span></p>
+                            </div>
+                        </div>
+                        <!-- 좋아요 수 / 예매버튼 -->
+                        <div class="movie-action">
+                            <!-- 좋아요 -->
+                            <button class="likeBtn">
+                                <img src="img/ico-heart-toggle-main.png">
+                                1.2k
+                            </button>
+                            <!-- 예매 -->
+                            <button class="reserveBtn">예매</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec01_bottom">
+                <!-- 검색창 -->
+                <div class="sec01-searchBox">
+                    <input type="text" placeholder="영화명을 입력해 주세요"/>
+                    <img src="img/ico-search-white.png"/>
+                </div>
+                <!-- 상영시간표 -->
+                <div class="sec01-schedule movie-menu">
+                    <img src="img/ico-schedule-main.png" alt="상영시간표 보기"/>
+                    <a href="#none">상영시간표</a>
+                </div>
+                <!-- 박스오피스 -->
+                <div class="sec01-schedule movie-menu">
+                    <img src="img/ico-boxoffice-main.png" alt="박스오피스 보기"/>
+                    <a href="#none">박스오피스</a>
+                </div>
+                <!-- 빠른예매 -->
+                <div class="sec01-reserve movie-menu">
+                    <img src="img/ico-tiket-main.png" alt="빠른예매 보기"/>
+                    <a href="#none">빠른예매</a>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- 섹션2 -->
+        <div class="section02">
+            <h2>혜택</h2>
+            <div class="sec02_top">
+                <!-- 슬라이드 이미지 -->
+                <div class="sec02-slider">
+                    <!-- 왼쪽사진 -->
+                    <img id="photo01" src="img/originalticketTEXT_01.jpg"/>
+                    <!-- 오른쪽사진 -->
+                    <img id="photo02" src="img/originalticket_01.jpg"/>
+                </div>
+                <!-- 슬라이드 바 5초 -->
+                <div class="sec02_sliderControl">
+                    <div class="sliderPage">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 슬라이드 페이지 제어 버튼 -->
+                    <div class="sliderPageControl">
+                        <!-- 앞으로 -->
+                        <img id="prevBtn" src="img/btn-benefit-slider-prev.png">
+                        <!-- 뒤로 -->
+                        <img id="nextBtn" src="img/btn-benefit-slider-next.png">
+                        <!-- 재생/정지 -->
+                        <img id="playPauseBtn" src="img/btn-benefit-slider-pause.png">
+                        <!-- 슬라이드 번호 -->
+                        <p id="slideCount">&nbsp;&nbsp;1 / 6</p>
+                    </div>
+                </div>
+                <!-- 슬라이드 우측 광고 이미지 -->
+                <div class="ad-movie">
+                    <img id="adMovieImg" src="img/poster_1.jpg">
+                </div>
+            </div>
+            <!-- 슬라이드바 하단 광고 이미지 -->
+            <div class="ad-benefit">
+                <img id="adBenefit01" src="img/banner_1.jpg"/>
+                <img id="adBenefit02" src="img/advertisement_1.jpg"/>
+            </div>
+            <!-- 광고이미지 하단 서비스메뉴 -->
+            <div class="service-section">
+                <button>
+                    <img src="img/ico-vip-main.png" alt="VIP LOUNGE 페이지로 이동"/>
+                    VIP LOUNGE
+                </button>
+                <button>
+                    <img src="img/ico-membership-main.png" alt="멤버십 페이지로 이동"/>
+                    멤버십
+                </button>
+                <button>
+                    <img src="img/ico-card-main.png" alt="할인카드안내 페이지로 이동"/>
+                    할인카드안내
+                </button>
+                <button>
+                    <img src="img/ico-event-main.png" alt="이벤트 페이지로 이동"/>
+                    이벤트
+                </button>
+                <button>
+                    <img src="img/ico-store-main.png" alt="스토어 페이지로 이동"/>
+                    스토어
+                </button>
+            </div>
+        </div>
+        
+        <!-- 섹션3 -->
+        <div class="section03">
+            <!-- 큐레이션 -->
+            <div class="sec03-head">
+                <h2>큐레이션</h2>
+                <a href="#none">큐레이션 더보기&nbsp;&nbsp;<strong>╋</strong></a>
+            </div>
+            <div class="curation">
+                <!-- 좌측 큰 이미지 -->
+                <div class="curation-main">
+                    <!-- 포스터 -->
+                    <img id="cur_poster" src="img/D1VQkXeszsdBSvS1bw9LzplLuSSHKnVE_420.jpg" alt="영화 상세보기"/>
+                    <!-- 라벨 -->
+                    <img id="cur_label" src="img/bg-bage-curation-film.png"/>
+                    <!-- 상세정보/예매 버튼 -->
+                    <div class="curationBtn">
+                        <button id="curBtn01">상세정보</button>
+                        <button id="curBtn02">예매</button>
+                    </div>
+                </div>
+                <!-- 우측 설명/다른 영화들 -->
+                <div class="curation-detail">
+                    <!-- 상단 -->
+                    <div class="detailHead">
+                        <p>#필름소사이어티</p>
+                        <h3>마작</h3>
+                    </div>
+                    <!-- 영화 설명 -->
+                    <div class="detailMid">
+                        <p>
+                            급격한 경제 성장을 이루며 전 세계의 돈이 모이는 1990년대 타이베이,</br>
+                            </br>
+                            네 청년 홍어, 소부처, 홍콩 그리고 룬룬은 모든 것을 함께 나눈다는 약속을 하며</br>
+                            청년 갱단을 조직해 한 집에서 살아간다.</br>
+                            </br>
+                            남자친구와 재회하기 위해 무작정 타이베이를 찾았지만 갈 곳이 없어진 프랑스인 마르트.</br>
+                            갱단의 리더 홍어는 마르트를 이용하기 위해 접근하고,</br>
+                            룬룬은 그녀에게 설레는 감정을 느끼기 시작한다.</br>
+                        </p>
+                    </div>
+                    <!-- 영화 목록 -->
+                    <ul class="curation-list">
+                        <!-- 프랑켄슈타인 : 더 뮤지컬 라이브 -->
+                        <li class="curation-item CI01">
+                            <img class="curItem-poster" src="img/pLJnAy88WMUcZR3yXR4C9XJe32bUnm3D_230.jpg" alt="영화 상세보기"/>
+                            <img class="curItem-label CL01" src="img/bg-bage-curation-classic-m.png" alt="영화 상세보기"/>
+                            <a href="#none">프랑켄슈타인 : 더 뮤지컬 라이브</a>
+                        </li>
+                        <!-- 만남의 집 -->
+                        <li class="curation-item CI02">
+                            <img class="curItem-poster" src="img/XCUVzLflygdN8iFdK40OMKOuGo1aYvPw_230.jpg" alt="영화 상세보기"/>
+                            <img class="curItem-label CL02" src="img/bg-bage-curation-film-m.png" alt="영화 상세보기"/>
+                            <a href="#none">만남의 집</a>
+                        </li>
+                        <!-- 연의 편지 -->
+                        <li class="curation-item CI03">
+                            <img class="curItem-poster" src="img/tQvnBJjlEyRTYcpRJeMB9cEvepdNeA0e_230.jpg" alt="영화 상세보기"/>
+                            <img class="curItem-label CL03" src="img/bg-bage-curation-film-m.png" alt="영화 상세보기"/>
+                            <a href="#none">연의 편지</a>
+                        </li>
+                        <!-- 그저 사고였을 뿐 -->
+                        <li class="curation-item CI04">
+                            <img class="curItem-poster" src="img/gnSBInCPT2rL1Sw2LrIcgc7xQKaLtEUC_230.jpg" alt="영화 상세보기"/>
+                            <img class="curItem-label CL04" src="img/bg-bage-curation-film-m.png" alt="영화 상세보기"/>
+                            <a href="#none">그저 사고였을 뿐</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 섹션4 -->
+        <div class="section04">
+            <h2>메가박스 안내</h2>
+            <!-- 상단 제외 전체 묶음 -->
+            <div class="theater-section">
+                <!-- 특별관 -->
+                <div class="theater-special">
+                    <img id="slidePrev" src="img/btn-specialtheater-prev.png"/>
+                    <div class="swipe">
+                        <!-- <a class="swipeImg"> -->
+                            <img src="img/bg-main-dolbycinema.png"/>
+                        <!-- </a>
+                        <a class="swipeImg"> -->
+                            <img src="img/bg-main-dva.png"/>
+                        <!-- </a>
+                        <a class="swipeImg">
+                        </a>
+                        <a class="swipeImg">
+                        </a>
+                        <a class="swipeImg">
+                        </a>
+                        <a class="swipeImg">
+                        </a>
+                        <a class="swipeImg">
+                        </a>
+                        <a class="swipeImg">
+                        </a>
+                        <a class="swipeImg">
+                        </a> -->
+                        <img src="img/bg-main-mx4d.png"/>
+                        <img src="img/bg-main-dolbyatmos.png"/>
+                        <img src="img/bg-main-led.png"/>
+                        <img src="img/bg-main-private.png"/>
+                        <img src="img/bg-main-suite.png"/>
+                        <img src="img/bg-main-recliner.png"/>
+                        <img src="img/bg-main-comfort.png"/>
+                    </div>
+                    <img id="slideNext" src="img/btn-specialtheater-next.png"/>
+                </div>
+                <!-- 지점별 안내 / 공지사항 -->
+                <div class="theater-info">
+                    <p>지점</p>
+                    <a id="info"><strong>[화곡]</strong>&nbsp;[화곡] 상영관 리뉴얼 (리클라이너) 공사안내 (10/20 ~)</a>
+                    <p>2025.10.16</p>
+                    <a>
+                        더보기
+                        <img src="img/ico-arr-right-gray.png"/>
+                    </a>
+                </div>
+                <!-- 고객센터 / FAQ / 단체대관문의 등 -->
+                <div class="service-info">
+                    <button>
+                        <img src="img/ico-main-customer.png" alt="페이지로 이동"/>
+                        <a>고객센터</a>
+                    </button>
+                    <button>
+                        <img src="img/ico-main-faq.png" alt="자주 묻는 질문 페이지로 이동"/>
+                        <a>자주 묻는 질문</a>
+                    </button>
+                    <button>
+                        <img src="img/ico-main-qna.png" alt="1:1 문의 페이지로 이동"/>
+                        <a>1:1 문의</a>
+                    </button>
+                    <button>
+                        <img src="img/ico-main-group.png" alt="단체/대관문의 페이지로 이동"/>
+                        <a>단체/대관문의</a>
+                    </button>
+                    <button>
+                        <img src="img/ico-main-lost.png" alt="분실물 문의/접수 페이지로 이동"/>
+                        <a>분실물 문의/접수</a>
+                    </button>
+                    <button>
+                        <img src="img/ico-main-boutique.png" alt="더 부티크 프라이빗 대관 예매 페이지로 이동"/>
+                        <a>더 부티크 프라이빗</br>대관예매</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 푸터 - 회사소개 등등 -->
+        <footer class="foot">
+            <!-- 푸터 첫줄 -->
+            <div class="foot_top">
+                <ul>
+                    <li><a href="#none">회사소개</a></li>
+                    <li><a href="#none">인재채용</a></li>
+                    <li><a href="#none">사회공헌</a></li>
+                    <li><a href="#none">제휴&#47;광고&#47;부대사업문의</a></li>
+                    <li><a href="#none">이용약관</a></li>
+                    <li><a href="#none"><strong>위치기만서비스 이용약관</strong></a></li>
+                    <li><a href="#none"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="#none">윤리경영</a></li>
+                </ul>
+                <a class="theater_search_btn" href="#none"><img src="img/ico-footer-search.png" alt="극장찾기"/>극장찾기</a>
+            </div>
+            <!-- 푸터 아랫줄 -->
+            <div class="foot_mid">
+                <img src="img/logo-opacity_new2.png" alt="메가박스 로고"/>
+                <div class="mid_p">
+                    <p>서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호 ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr</p>
+                    <p>대표자명 홍정인, 남용석 · 개인정보보호책임자 김수현 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2025-서울강남-00722</p>
+                    <p>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+                </div>
+                <div class="mid_a">
+                    <a href="#none"><img src="img/youtube.png" alt="유튜브 바로가기"/></a>
+                    <a href="#none"><img src="img/instagram.png" alt="인스타그램 바로가기"/></a>
+                    <a href="#none"><img src="img/facebook.png" alt="페이스북 바로가기"/></a>
+                    <a href="#none"><img src="img/twitter.png" alt="트위터 바로가기"/></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 극장 찾기 -->
+        <div class="theater_search_modal">
+            <div class="theater_search_modalIn">
+                <div class="theater_search_head">
+                    <h3>메가박스 극장 찾기</h3>
+                    <button onclick="closeTheaterModal()">
+                        <img src="img/btn-header-layer-close.png">
+                    </button>
+                </div>
+                <ul>
+                    <li>
+                        <span>서울</span>
+                        <div class="cinema_list">
+                            <a href="#none">강남</a>
+                            <a href="#none">강동</a>
+                            <a href="#none">구의이스트폴</a>
+                            <a href="#none">군자</a>
+                            <a href="#none">더부티크목동현대백화점</a>
+                            <a href="#none">동대문</a>
+                            <a href="#none">마곡</a>
+                            <a href="#none">목동</a>
+                            <a href="#none">상봉</a>
+                            <a href="#none">상암월드컵경기장</a>
+                            <a href="#none">성수</a>
+                            <a href="#none">센트럴</a>
+                            <a href="#none">송파파크하이비오</a>
+                            <a href="#none">신촌</a>
+                            <a href="#none">이수</a>
+                            <a href="#none">창동</a>
+                            <a href="#none">코엑스</a>
+                            <a href="#none">픽쳐하우스</a>
+                            <a href="#none">홍대</a>
+                            <a href="#none">화곡</a>
+                            <a href="#none">ARTNINE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>경기</span>
+                        <div class="cinema_list">
+                            <a href="#none">고양스타필드</a>
+                            <a href="#none">광명AK플라자</a>
+                            <a href="#none">광명소하</a>
+                            <a href="#none">금정AK플라자</a>
+                            <a href="#none">김포한강신도시</a>
+                            <a href="#none">남양주</a>
+                            <a href="#none">남양주현대아울렛스페이스원</a>
+                            <a href="#none">동탄</a>
+                            <a href="#none">동탄역</a>
+                            <a href="#none">미사강변(하남종합운동장)</a>
+                            <a href="#none">백석벨라시타</a>
+                            <a href="#none">별내</a>
+                            <a href="#none">부천스타필드시티</a>
+                            <a href="#none">분당</a>
+                            <a href="#none">성남모란</a>
+                            <a href="#none">수원</a>
+                            <a href="#none">수원AK플라자(수원역)</a>
+                            <a href="#none">수원남문</a>
+                            <a href="#none">수원스타필드</a>
+                            <a href="#none">수원인계</a>
+                            <a href="#none">수원호매실(휴관)</a>
+                            <a href="#none">시흥배곧</a>
+                            <a href="#none">시흥정왕</a>
+                            <a href="#none">안산중앙</a>
+                            <a href="#none">안성스타필드</a>
+                            <a href="#none">용인테크노밸리</a>
+                            <a href="#none">의정부민락</a>
+                            <a href="#none">킨텍스</a>
+                            <a href="#none">파주금촌</a>
+                            <a href="#none">파주운정</a>
+                            <a href="#none">평택비전</a>
+                            <a href="#none">하남스타필드</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>인천</span>
+                        <div class="cinema_list">
+                            <a href="#none">검단</a>
+                            <a href="#none">송도(트리플스트리트)</a>
+                            <a href="#none">영종</a>
+                            <a href="#none">영종하늘도시</a>
+                            <a href="#none">인천논현</a>
+                            <a href="#none">인천학익(시티오씨엘)</a>
+                            <a href="#none">청라지젤(휴관)</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>대전/충청/세종</span>
+                        <div class="cinema_list">
+                            <a href="#none">공주</a>
+                            <a href="#none">논산</a>
+                            <a href="#none">대전</a>
+                            <a href="#none">대전신세계아트앤사이언스</a>
+                            <a href="#none">대전유성</a>
+                            <a href="#none">대전중앙로</a>
+                            <a href="#none">대전현대아울렛</a>
+                            <a href="#none">세종(조치원)</a>
+                            <a href="#none">세종나성</a>
+                            <a href="#none">세종청사</a>
+                            <a href="#none">오창</a>
+                            <a href="#none">진천</a>
+                            <a href="#none">천안</a>
+                            <a href="#none">청주사창</a>
+                            <a href="#none">청주성안길</a>
+                            <a href="#none">청주터미널</a>
+                            <a href="#none">충주연수</a>
+                            <a href="#none">홍성내포</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>부산/대구/경상</span>
+                        <div class="cinema_list">
+                            <a href="#none">경북도청</a>
+                            <a href="#none">경산하양</a>
+                            <a href="#none">구미강동</a>
+                            <a href="#none">김천</a>
+                            <a href="#none">남포항</a>
+                            <a href="#none">대구세븐밸리(칠곡)</a>
+                            <a href="#none">대구신세계(동대구)</a>
+                            <a href="#none">대구이시아</a>
+                            <a href="#none">대구프리미엄만경관</a>
+                            <a href="#none">덕천</a>
+                            <a href="#none">마산(경남대)</a>
+                            <a href="#none">부산극장</a>
+                            <a href="#none">부산대</a>
+                            <a href="#none">북대구(칠곡)</a>
+                            <a href="#none">사상</a>
+                            <a href="#none">삼천포</a>
+                            <a href="#none">서면대한</a>
+                            <a href="#none">양산</a>
+                            <a href="#none">양산증산</a>
+                            <a href="#none">울산</a>
+                            <a href="#none">정관(휴관)</a>
+                            <a href="#none">진주(중안)</a>
+                            <a href="#none">창원</a>
+                            <a href="#none">창원내서</a>
+                            <a href="#none">포항</a>
+                            <a href="#none">해운대(장산)</a>
+                            <a href="#none">화명</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>광주/전라</span>
+                        <div class="cinema_list">
+                            <a href="#none">광주상무</a>
+                            <a href="#none">광주하남</a>
+                            <a href="#none">목포하당(포르모)</a>
+                            <a href="#none">순천</a>
+                            <a href="#none">여수웅천</a>
+                            <a href="#none">전대(광주)</a>
+                            <a href="#none">전주객사</a>
+                            <a href="#none">전주혁신</a>
+                            <a href="#none">첨단</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>강원</span>
+                        <div class="cinema_list">
+                            <a href="#none">남춘천</a>
+                            <a href="#none">속초</a>
+                            <a href="#none">원주혁신</a>
+                            <a href="#none">춘천석사</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>제주</span>
+                        <div class="cinema_list">
+                            <a href="#none">제주삼화</a>
+                            <a href="#none">제주서귀포</a>
+                            <a href="#none">제주아라</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 메인화면 모달 -->
+        <div class="popupModal">
+            <!-- 모달 전체 - 흰 배경 -->
+            <div class="modal_main">
+                <!-- 엑스버튼 -->
+                <img id="xBtn" src="img/btn-header-layer-close.png"/>
+                <!-- 이미지 -->
+                <div class="modalImg_trans">
+                    <img id="modalImg" class="modalactive01" src="img/adModal_1.jpg"/>
+                </div>
+                <!-- 버튼관련 전체 -->
+                <div class="modalbutton">
+                    <!-- 재생/정지 버튼 -->
+                    <img id="modalPause" src="img/btn-benefit-slider-pause.png"/>
+                    <!-- 슬라이드 순서 동그라미 -->
+                    <div class="slide-nav">
+                        <span class="modalactive02"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 하루동안 보지 않기 -->
+                    <div class="popup-option">
+                        <input type="checkbox" id="popupCheckbox">
+                        <label type="checkbox" for="popupCheckbox">하루동안 보지 않기</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
